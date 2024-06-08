@@ -1,5 +1,6 @@
 package dev.mzcy;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
@@ -12,6 +13,7 @@ public class SkriptFantasies extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        Bukkit.getPluginManager().registerEvents(new dev.mzcy.permission.PermissionHandler(), this);
         System.out.println(PREFIX + "§aSkriptFantasies has been enabled!");
 
     }
